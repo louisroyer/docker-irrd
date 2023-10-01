@@ -11,6 +11,6 @@ sed -i "s/IRRD_DATABSE_URL/$IRRD_DATABSE_URL/g" /etc/irrd.yaml
 mkdir /var/run/irrd
 chown daemon:daemon /var/run/irrd
 
-/opt/pypy/bin/irrd_database_upgrade --config=/etc/irrd.yaml
+/env/bin/irrd_database_upgrade --config=/etc/irrd.yaml
 
-exec /opt/pypy/bin/irrd --foreground --config=/etc/irrd.yaml
+exec /env/bin/irrd --foreground --config=/etc/irrd.yaml

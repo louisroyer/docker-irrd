@@ -37,6 +37,6 @@ services:
     container_name: redis
     healthcheck:
       test: [ "CMD-SHELL", "redis-cli get nil" ]
-      interval: 60s
-      timeout: 5s
+      interval: 15s
+      timeout: 15s
       retries: 5
